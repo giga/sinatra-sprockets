@@ -78,7 +78,7 @@ module Sinatra::Sprockets
       end
 
       def rewrite_relative_url_root(source, relative_url_root)
-        relative_url_root && !source.starts_with?("#{relative_url_root}/") ? "#{relative_url_root}#{source}" : source
+        relative_url_root && !source.start_with?("#{relative_url_root}/") ? "#{relative_url_root}#{source}" : source
       end
 
       def compute_asset_host(source)
